@@ -6,8 +6,12 @@ describe('App', () => {
   const app = shallow(<App />);
 
   it('renders without crashing', () => {
-    const div = document.createElement('div');
+    // const div = document.createElement('div');
     expect(app).toMatchSnapshot();
+  });
+
+  it('contains a connected MagicSquares component', () => {
+    expect(app.find('Connect(MagicSquares)').exists()).toBe(true);
   });
 });
   

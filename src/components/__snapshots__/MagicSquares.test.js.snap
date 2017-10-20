@@ -1,0 +1,343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MagicSquares renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MagicSquares
+    gridSize={3}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <styled.input
+          className="grid-cell"
+          placeholder={1}
+/>,
+        <styled.input
+          className="grid-cell"
+          placeholder={2}
+/>,
+        <styled.input
+          className="grid-cell"
+          placeholder={3}
+/>,
+        <styled.input
+          className="grid-cell"
+          placeholder={4}
+/>,
+        <styled.input
+          className="grid-cell"
+          placeholder={5}
+/>,
+        <styled.input
+          className="grid-cell"
+          placeholder={6}
+/>,
+        <styled.input
+          className="grid-cell"
+          placeholder={7}
+/>,
+        <styled.input
+          className="grid-cell"
+          placeholder={8}
+/>,
+        <styled.input
+          className="grid-cell"
+          placeholder={9}
+/>,
+      ],
+      "gridSize": 3,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "bf5f727a-4d6c-4768-9d21-5b6306d575a6",
+        "nodeType": "class",
+        "props": Object {
+          "className": "grid-cell",
+          "placeholder": 1,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "5bcad94d-e88c-4ce4-9355-126460f15acb",
+        "nodeType": "class",
+        "props": Object {
+          "className": "grid-cell",
+          "placeholder": 2,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "60472adf-9fcc-466c-91c1-618dfa29b263",
+        "nodeType": "class",
+        "props": Object {
+          "className": "grid-cell",
+          "placeholder": 3,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "297ff4d5-61f0-416d-b898-32cb463bada4",
+        "nodeType": "class",
+        "props": Object {
+          "className": "grid-cell",
+          "placeholder": 4,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "df2aa720-0237-4f20-81fb-dc1ba4d6d689",
+        "nodeType": "class",
+        "props": Object {
+          "className": "grid-cell",
+          "placeholder": 5,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "ae1f9999-9af6-41a2-9b4f-ee2b7dac8ab5",
+        "nodeType": "class",
+        "props": Object {
+          "className": "grid-cell",
+          "placeholder": 6,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "16302398-9558-4afc-ab77-e84083be1923",
+        "nodeType": "class",
+        "props": Object {
+          "className": "grid-cell",
+          "placeholder": 7,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "a9f28020-1216-45e3-8ee2-1461c4f916c6",
+        "nodeType": "class",
+        "props": Object {
+          "className": "grid-cell",
+          "placeholder": 8,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "750c1c19-cd62-4205-89a2-d246a8bc6fdb",
+        "nodeType": "class",
+        "props": Object {
+          "className": "grid-cell",
+          "placeholder": 9,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <styled.input
+            className="grid-cell"
+            placeholder={1}
+/>,
+          <styled.input
+            className="grid-cell"
+            placeholder={2}
+/>,
+          <styled.input
+            className="grid-cell"
+            placeholder={3}
+/>,
+          <styled.input
+            className="grid-cell"
+            placeholder={4}
+/>,
+          <styled.input
+            className="grid-cell"
+            placeholder={5}
+/>,
+          <styled.input
+            className="grid-cell"
+            placeholder={6}
+/>,
+          <styled.input
+            className="grid-cell"
+            placeholder={7}
+/>,
+          <styled.input
+            className="grid-cell"
+            placeholder={8}
+/>,
+          <styled.input
+            className="grid-cell"
+            placeholder={9}
+/>,
+        ],
+        "gridSize": 3,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "bf5f727a-4d6c-4768-9d21-5b6306d575a6",
+          "nodeType": "class",
+          "props": Object {
+            "className": "grid-cell",
+            "placeholder": 1,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "5bcad94d-e88c-4ce4-9355-126460f15acb",
+          "nodeType": "class",
+          "props": Object {
+            "className": "grid-cell",
+            "placeholder": 2,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "60472adf-9fcc-466c-91c1-618dfa29b263",
+          "nodeType": "class",
+          "props": Object {
+            "className": "grid-cell",
+            "placeholder": 3,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "297ff4d5-61f0-416d-b898-32cb463bada4",
+          "nodeType": "class",
+          "props": Object {
+            "className": "grid-cell",
+            "placeholder": 4,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "df2aa720-0237-4f20-81fb-dc1ba4d6d689",
+          "nodeType": "class",
+          "props": Object {
+            "className": "grid-cell",
+            "placeholder": 5,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "ae1f9999-9af6-41a2-9b4f-ee2b7dac8ab5",
+          "nodeType": "class",
+          "props": Object {
+            "className": "grid-cell",
+            "placeholder": 6,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "16302398-9558-4afc-ab77-e84083be1923",
+          "nodeType": "class",
+          "props": Object {
+            "className": "grid-cell",
+            "placeholder": 7,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "a9f28020-1216-45e3-8ee2-1461c4f916c6",
+          "nodeType": "class",
+          "props": Object {
+            "className": "grid-cell",
+            "placeholder": 8,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "750c1c19-cd62-4205-89a2-d246a8bc6fdb",
+          "nodeType": "class",
+          "props": Object {
+            "className": "grid-cell",
+            "placeholder": 9,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

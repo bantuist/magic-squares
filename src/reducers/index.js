@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+// import { combineReducers } from 'redux';
 import magicSquares from './magicSquares';
 
 export default magicSquares;
