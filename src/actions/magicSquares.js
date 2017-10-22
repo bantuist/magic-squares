@@ -6,3 +6,9 @@ export const setGridSize = gridSize => {
     gridSize
   };
 };
+
+// export const getTotals = () => {
+//   return {
+//     type: constants.GET_TOTALS
+//   };
+// };

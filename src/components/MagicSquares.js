@@ -4,16 +4,36 @@ import uuid from 'uuid';
 import { setGridSize } from '../actions/magicSquares';
 import styled from 'styled-components';
 
-const Grid = styled.div`
+const Container = styled.div`
+  height: 400px;
+  width: 500px;
   display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(${({gridSize}) => gridSize}, 100px);
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 3fr 1fr;
 `;
-
+const Cells = styled.div`
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: repeat(${({ gridSize }) => gridSize}, 100px);
+  grid-auto-rows: 100px;
+`;
+const RowTotals = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  `;
+const ColumnTotals = styled.div`
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: row;
+`;
 const Cell = styled.div`
-border: 1px solid #ddd;
+  height: 100%;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
-
 const Input = styled.input`
   height: 100px;
   width: 100%;
@@ -25,59 +45,58 @@ const Input = styled.input`
 `;
 
 export class MagicSquares extends Component {
-  renderGrid(gridSize) {
-    const cell = { x: gridSize + 1, y: 0 };
+  render() {
+    const { gridSize, grid, totals } = this.props;
+    const { rows, columns, diagonals } = totals;
 
-    return Array.from(Array(gridSize * gridSize)).map((row, i) => {
-      // Move to next row (x--) and reset column (y = 0) at the end of each row
-      if (i % gridSize === 0) {
-        cell.x--;
-        cell.y = 0;
-      }
-      
-      // Move to next column (y++)
-      cell.y++;
-      
-      // Calculate diagonals based on the number of cells between diagonal cells
-      if (i % (gridSize + 1) === 0) {
-        cell.diagonal = '1';
-      } else if (i % (gridSize - 1) === 0) {
-        cell.diagonal = '2';
-      } else {
-        cell.diagonal = false;
-      }
-
-      let rowTotal, columnTotal;
-      if (cell.y === gridSize) rowTotal = true;
-      if (cell.x === 1) columnTotal = true;
-
-      // console.log(cell);
-
-      return (
-        <Cell className="grid-cell" key={uuid()}>
+    const cells = Object.keys(grid).map((key, i) => {
+      let cell = grid[key];
+      let cellClassName =  `grid-cell ${cell.x}-${cell.y} ${cell.diagonal}`;
+       return (
+        <Cell className={cellClassName} key={uuid()}>
           <Input 
-            data-cell={JSON.stringify(cell)} 
-            placeholder={`${++i}: (${cell.x}, ${cell.y})`} 
+            placeholder={`${i}: (${cell.x}, ${cell.y}), ${cell.value}`} 
           />
-          {(rowTotal || columnTotal) && 
-            <span>total: </span>
-          }
         </Cell>
       );
     });
-  }
-  render() {
-    const { gridSize } = this.props;
-    // const gridSize = 5;
+
+    const rowTotals = Object.keys(rows).map(key => {
+      return (
+        <Cell key={key} className="row-total">
+          <span>{rows[key]}</span>
+        </Cell>
+      );
+    });
+
+    const columnTotals = Object.keys(columns).map(key => {
+      return (
+        <Cell key={key} className="row-total">
+          <span>{columns[key]}</span>
+        </Cell>
+      );
+    });
 
     return (
-      <Grid gridSize={gridSize}>
-        {this.renderGrid(gridSize)}
-      </Grid>
+      <Container >
+        <Cells gridSize={gridSize}>
+          {cells}
+        </Cells>
+        <RowTotals>{rowTotals}</RowTotals>
+        <ColumnTotals>
+          <Cell><span>{diagonals[0]}</span></Cell>
+          {columnTotals}
+          <Cell><span>{diagonals[1]}</span></Cell>
+        </ColumnTotals>
+      </Container>
     );
   }
 }
 
 export default connect(state => {
-  return { gridSize: state.gridSize }
+  return { 
+    gridSize: state.gridSize, 
+    grid: state.grid, 
+    totals: state.totals
+  };
 }, { setGridSize })(MagicSquares);
