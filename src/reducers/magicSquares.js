@@ -11,12 +11,13 @@ const magicSquares = (state = { gridSize: 3, grid: grid.setGrid(3), totals: grid
       return action.gridSize;
     // case constants.DEFINE_GRID:
     case constants.SET_GRID:
-      grid.setGrid(action.gridSize);
-      return grid.grid;
+      return grid.setGrid(action.gridSize);
     case constants.UPDATE_GRID:
-      // grid.updateGrid(action(cellId, value));
-      // return grid.grid;
-      return state;
+      return {
+        ...state,
+        grid: grid.updateGrid(action.id, action.value),
+        totals: grid.getTotals()
+      };
     case constants.GET_TOTALS:
       return grid.getTotals();
     default:

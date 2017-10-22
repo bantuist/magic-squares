@@ -52,17 +52,18 @@ export default class Grid {
   }
 
   updateGrid(id, value) {
-    this.grid.id.value = value;
+    this.grid[id].value = value;
+    return this.grid;
   }
 
   getTotals() {
-    let { totals, grid, gridSize } = this;
-    let row, column, diagonal;
+    let { grid, gridSize } = this;
+    let row, column;
     let rows, columns, diagonals;
 
     Object.keys(grid).forEach((key, i) => {
       let cell = grid[key];
-      let { id, x, y, diagonal, value } = cell;
+      let { x, y, value } = cell;
 
       rows = rows ? rows : {};
       columns = columns ? columns : {};

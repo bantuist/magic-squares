@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import uuid from 'uuid';
-import { setGridSize } from '../actions/magicSquares';
+import { setGridSize, updateGrid } from '../actions/magicSquares';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -55,6 +55,8 @@ export class MagicSquares extends Component {
        return (
         <Cell className={cellClassName} key={uuid()}>
           <Input 
+            onChange={event => this.props.updateGrid(cell.id, parseInt(event.target.value || 0, 10))}
+            value={cell.value}
             placeholder={`${i}: (${cell.x}, ${cell.y}), ${cell.value}`} 
           />
         </Cell>
@@ -99,4 +101,4 @@ export default connect(state => {
     grid: state.grid, 
     totals: state.totals
   };
-}, { setGridSize })(MagicSquares);
+}, { setGridSize, updateGrid })(MagicSquares);
