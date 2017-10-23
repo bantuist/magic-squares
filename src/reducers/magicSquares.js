@@ -3,13 +3,15 @@ import Grid from '../helpers/Grid';
 
 const grid = new Grid(3);
 
-const magicSquares = (state = { 
-  isActive: false,
+const initialState = {
+  activeElement: null,
   gridSize: 3, 
-  grid: grid.setGrid(3), 
+  grid: grid.setGrid(3),
   totals: grid.getTotals() 
-}, action) => {
-  console.log(state, action);
+};
+
+const magicSquares = (state = initialState, action) => {
+  // console.log(state, action);
 
   switch(action.type) {
     case constants.SET_GRID_SIZE:

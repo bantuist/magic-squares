@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import uuid from 'uuid';
 import { setGridSize, updateGrid } from '../actions/magicSquares';
 import styled from 'styled-components';
 
@@ -18,13 +17,13 @@ const Cells = styled.div`
   grid-auto-rows: 100px;
 `;
 const RowTotals = styled.div`
-  font-size: 2em;
+  font-size: 1.5em;
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   `;
 const ColumnTotals = styled.div`
-  font-size: 2em;
+  font-size: 1.5em;
   grid-column: 1/4;
   display: flex;
   flex-direction: row;
@@ -37,9 +36,11 @@ const Cell = styled.div`
   align-items: center;
 `;
 const Input = styled.input`
+  color: ${({ isEven }) => isEven ? '#FFF' : '#222'};
+  background-color: ${({ isEven }) => isEven ? '#222' : '#FFF'};
   height: 100px;
   width: 100%;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
   &:focus {
     outline: none;
@@ -47,20 +48,29 @@ const Input = styled.input`
 `;
 
 export class MagicSquares extends Component {
+  componentDidMount() {
+    // QUESTION: Why can't I focus this here?
+    // console.log(this[`grid-cell-0`]);
+    // this[`grid-cell-0`].focus();
+  }
   componentDidUpdate() {
-    const node = this[this.props.activeElement];
-    const temp = node.value;
+    const active = this[this.props.activeElement];
+    const temp = active.value;
 
-    node.value = '';
-    node.value = temp;
-    node.focus();
+    active.value = '';
+    active.value = temp;
+    active.focus();
   }
   handleChange = (event, id) => {
-    this.props.updateGrid(
-      id, 
-      parseInt(event.target.value || 0, 10),
-      `cell-${id}`
-    );
+    const { value } = event.target;
+
+    if (!isNaN(value)) {
+      this.props.updateGrid(
+        id, 
+        parseInt(value || 0, 10),
+        `grid-cell cell-${id}`
+      );
+    }
   }
 
   render() {
@@ -69,13 +79,18 @@ export class MagicSquares extends Component {
 
     const cells = Object.keys(grid).map((key, i) => {
       let cell = grid[key];
-      let cellClassName =  `grid-cell-${cell.id} ${cell.x}-${cell.y} ${cell.diagonal}`;
+      let isEven = i % 2 === 0;
+      // grid-cell used to select all grid cells
+      // cell-${cell.id} used to select specific cell
+      let cellClassName =  `grid-cell cell-${cell.id}`;
 
       return (
-        <Cell key={uuid()}>
+        <Cell key={cell.id}>
           <Input
             className={cellClassName}
-            innerRef={comp => this[`cell-${cell.id}`] = comp}
+            isEven={isEven}
+            maxLength="3"
+            innerRef={comp => this[`grid-cell cell-${cell.id}`] = comp}
             onChange={event => this.handleChange(event, cell.id)}
             value={cell.value}
             // placeholder={`${i}: (${cell.x}, ${cell.y}), ${cell.value}`} 

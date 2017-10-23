@@ -14,7 +14,7 @@ export default class Grid {
     
     for(let i = 0; i < gridSize * gridSize; i++) {
       cell.id = i;
-      cell.value = i + 1;
+      cell.value = 0;
       
       // Move to next row (x--) and reset column (y = 0) at the end of each row
       if (i % gridSize === 0) {
@@ -73,13 +73,16 @@ export default class Grid {
       diagonals = diagonals ? diagonals : [ 0, 0 ];
 
       // Diagonal totals based on diagonal property
+      // TODO: Switches/fall-throughs
+      if (cell.diagonal === 'center') {
+        diagonals[0] += cell.value;
+        diagonals[1] += cell.value;
+      }
+
       if (cell.diagonal === '1') {
-        diagonals[0] += cell.value;
+        diagonals[1] += cell.value;
       } else if (cell.diagonal === '2') {
-        diagonals[1] += cell.value;
-      } else if (cell.diagonal === 'center') {
         diagonals[0] += cell.value;
-        diagonals[1] += cell.value;
       }
 
       // Column totals based on first row

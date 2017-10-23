@@ -15,9 +15,3 @@ export const updateGrid = (id, value, activeElement) => {
     activeElement
   };
 };
-
-// export const getTotals = () => {
-//   return {
-//     type: constants.GET_TOTALS
-//   };
-// };
