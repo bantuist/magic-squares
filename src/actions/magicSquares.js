@@ -7,11 +7,12 @@ export const setGridSize = gridSize => {
   };
 };
 
-export const updateGrid = (id, value) => {
+export const updateGrid = (id, value, activeElement) => {
   return {
     type: constants.UPDATE_GRID,
     id,
-    value
+    value,
+    activeElement
   };
 };
 

@@ -3,7 +3,12 @@ import Grid from '../helpers/Grid';
 
 const grid = new Grid(3);
 
-const magicSquares = (state = { gridSize: 3, grid: grid.setGrid(3), totals: grid.getTotals() }, action) => {
+const magicSquares = (state = { 
+  isActive: false,
+  gridSize: 3, 
+  grid: grid.setGrid(3), 
+  totals: grid.getTotals() 
+}, action) => {
   console.log(state, action);
 
   switch(action.type) {
@@ -15,6 +20,7 @@ const magicSquares = (state = { gridSize: 3, grid: grid.setGrid(3), totals: grid
     case constants.UPDATE_GRID:
       return {
         ...state,
+        activeElement: action.activeElement,
         grid: grid.updateGrid(action.id, action.value),
         totals: grid.getTotals()
       };

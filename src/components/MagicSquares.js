@@ -18,11 +18,13 @@ const Cells = styled.div`
   grid-auto-rows: 100px;
 `;
 const RowTotals = styled.div`
+  font-size: 2em;
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   `;
 const ColumnTotals = styled.div`
+  font-size: 2em;
   grid-column: 1/4;
   display: flex;
   flex-direction: row;
@@ -37,7 +39,7 @@ const Cell = styled.div`
 const Input = styled.input`
   height: 100px;
   width: 100%;
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
   &:focus {
     outline: none;
@@ -45,19 +47,38 @@ const Input = styled.input`
 `;
 
 export class MagicSquares extends Component {
+  componentDidUpdate() {
+    const node = this[this.props.activeElement];
+    const temp = node.value;
+
+    node.value = '';
+    node.value = temp;
+    node.focus();
+  }
+  handleChange = (event, id) => {
+    this.props.updateGrid(
+      id, 
+      parseInt(event.target.value || 0, 10),
+      `cell-${id}`
+    );
+  }
+
   render() {
     const { gridSize, grid, totals } = this.props;
     const { rows, columns, diagonals } = totals;
 
     const cells = Object.keys(grid).map((key, i) => {
       let cell = grid[key];
-      let cellClassName =  `grid-cell ${cell.x}-${cell.y} ${cell.diagonal}`;
-       return (
-        <Cell className={cellClassName} key={uuid()}>
-          <Input 
-            onChange={event => this.props.updateGrid(cell.id, parseInt(event.target.value || 0, 10))}
+      let cellClassName =  `grid-cell-${cell.id} ${cell.x}-${cell.y} ${cell.diagonal}`;
+
+      return (
+        <Cell key={uuid()}>
+          <Input
+            className={cellClassName}
+            innerRef={comp => this[`cell-${cell.id}`] = comp}
+            onChange={event => this.handleChange(event, cell.id)}
             value={cell.value}
-            placeholder={`${i}: (${cell.x}, ${cell.y}), ${cell.value}`} 
+            // placeholder={`${i}: (${cell.x}, ${cell.y}), ${cell.value}`} 
           />
         </Cell>
       );
@@ -95,10 +116,6 @@ export class MagicSquares extends Component {
   }
 }
 
-export default connect(state => {
-  return { 
-    gridSize: state.gridSize, 
-    grid: state.grid, 
-    totals: state.totals
-  };
+export default connect(({ gridSize, grid, totals, activeElement }) => {
+  return { gridSize, grid, totals, activeElement };
 }, { setGridSize, updateGrid })(MagicSquares);
