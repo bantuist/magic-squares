@@ -18,9 +18,16 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <styled.h1>
-          Magic Squares
-</styled.h1>,
+        <styled.header>
+          <styled.h1>
+                    Magic Squares
+          </styled.h1>
+          <styled.code>
+                    &lt;
+                    UnderDevelopment 
+                    /&gt;
+          </styled.code>
+</styled.header>,
         <Connect(MagicSquares) />,
       ],
       "className": "App",
@@ -32,10 +39,50 @@ ShallowWrapper {
         "key": null,
         "nodeType": "class",
         "props": Object {
-          "children": "Magic Squares",
+          "children": Array [
+            <styled.h1>
+              Magic Squares
+</styled.h1>,
+            <styled.code>
+              &lt;
+              UnderDevelopment 
+              /&gt;
+</styled.code>,
+          ],
         },
         "ref": null,
-        "rendered": "Magic Squares",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Magic Squares",
+            },
+            "ref": null,
+            "rendered": "Magic Squares",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                "<",
+                "UnderDevelopment ",
+                "/>",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "<",
+              "UnderDevelopment ",
+              "/>",
+            ],
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
       Object {
@@ -57,9 +104,16 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <styled.h1>
-            Magic Squares
-</styled.h1>,
+          <styled.header>
+            <styled.h1>
+                        Magic Squares
+            </styled.h1>
+            <styled.code>
+                        &lt;
+                        UnderDevelopment 
+                        /&gt;
+            </styled.code>
+</styled.header>,
           <Connect(MagicSquares) />,
         ],
         "className": "App",
@@ -71,10 +125,50 @@ ShallowWrapper {
           "key": null,
           "nodeType": "class",
           "props": Object {
-            "children": "Magic Squares",
+            "children": Array [
+              <styled.h1>
+                Magic Squares
+</styled.h1>,
+              <styled.code>
+                &lt;
+                UnderDevelopment 
+                /&gt;
+</styled.code>,
+            ],
           },
           "ref": null,
-          "rendered": "Magic Squares",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Magic Squares",
+              },
+              "ref": null,
+              "rendered": "Magic Squares",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "<",
+                  "UnderDevelopment ",
+                  "/>",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "<",
+                "UnderDevelopment ",
+                "/>",
+              ],
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         Object {

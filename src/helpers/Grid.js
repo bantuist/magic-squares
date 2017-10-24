@@ -16,7 +16,7 @@ export default class Grid {
       total += i;
     };
 
-    return total / 3;
+    return total / gridSize;
   };
 
   setGrid(gridSize) {
