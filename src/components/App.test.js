@@ -12,5 +12,11 @@ describe('App', () => {
   it('contains a connected MagicSquares component', () => {
     expect(app.find('Connect(MagicSquares)').exists()).toBe(true);
   });
+
+  xit('contains a connected Controls component', () => {
+    expect(app.find('Connect(Controls)').exists()).toBe(true);
+  });
+
+
 });
   

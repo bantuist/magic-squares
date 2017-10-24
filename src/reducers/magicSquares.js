@@ -6,6 +6,7 @@ const grid = new Grid(3);
 const initialState = {
   activeElement: null,
   gridSize: 3, 
+  total: grid.total,
   grid: grid.setGrid(3),
   totals: grid.getTotals() 
 };

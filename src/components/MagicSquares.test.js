@@ -12,6 +12,7 @@ describe('MagicSquares', () => {
   const props = {
     activeElement: null,
     gridSize: 3, 
+    total: 0,
     grid: grid.setGrid(3),
     totals: grid.getTotals(),
     setGrid: mockSetGrid,
@@ -67,7 +68,6 @@ describe('MagicSquares', () => {
   });
 
   describe('when a column has a correct total', () => {
-    // const correctTotal = 15;
   });
   describe('when a row has a correct total', () => {
 

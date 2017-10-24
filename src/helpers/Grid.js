@@ -2,12 +2,22 @@
 export default class Grid {
   constructor(gridSize) {
     this.gridSize = gridSize;
+    this.total = this.setTotal(gridSize);
     this.grid = {};
     this.totals = { rows: {}, columns: {}, diagonals: {} };
   }
-
   isEven = gridSize => gridSize % 2 === 0;
   isCenter = point => Math.ceil(this.gridSize / 2) === point;
+
+  setTotal(gridSize) {
+    let total = 0;
+
+    for(let i = 1; i <= gridSize * gridSize; i++) {
+      total += i;
+    };
+
+    return total / 3;
+  };
 
   setGrid(gridSize) {
     const cell = { x: gridSize + 1, y: 0};
@@ -108,4 +118,3 @@ export default class Grid {
     return { rows, columns, diagonals };
   }
 }
-  

@@ -21,12 +21,15 @@ const RowTotals = styled.div`
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  `;
+`;
 const ColumnTotals = styled.div`
   font-size: 1.5em;
   grid-column: 1/4;
   display: flex;
   flex-direction: row;
+`;
+const Total = styled.span`
+  color: ${({ isSolved }) => isSolved ? '#7AE582' : '#FF5A5F'};
 `;
 const Cell = styled.div`
   height: 100%;
@@ -61,6 +64,9 @@ export class MagicSquares extends Component {
     active.value = temp;
     active.focus();
   }
+
+  isSolved = total => total === this.props.total;
+
   handleChange = (event, id) => {
     const { value } = event.target;
 
@@ -74,7 +80,7 @@ export class MagicSquares extends Component {
   }
 
   render() {
-    const { gridSize, grid, totals } = this.props;
+    const { gridSize, total, grid, totals } = this.props;
     const { rows, columns, diagonals } = totals;
 
     const cells = Object.keys(grid).map((key, i) => {
@@ -92,7 +98,7 @@ export class MagicSquares extends Component {
             maxLength="3"
             innerRef={comp => this[`grid-cell cell-${cell.id}`] = comp}
             onChange={event => this.handleChange(event, cell.id)}
-            value={cell.value}
+            value={cell.value ? cell.value : '' }
             // placeholder={`${i}: (${cell.x}, ${cell.y}), ${cell.value}`} 
           />
         </Cell>
@@ -100,20 +106,27 @@ export class MagicSquares extends Component {
     });
 
     const rowTotals = Object.keys(rows).map(key => {
+      const total = rows[key];
+        
       return (
         <Cell key={key} className="row-total">
-          <span>{rows[key]}</span>
+          <Total isSolved={this.isSolved(total)}>{total ? total : '' }</Total>
         </Cell>
       );
     });
 
     const columnTotals = Object.keys(columns).map(key => {
+      const total = columns[key];
+
       return (
         <Cell key={key} className="row-total">
-          <span>{columns[key]}</span>
+          <Total isSolved={this.isSolved(total)}>{total ? total : '' }</Total>
         </Cell>
       );
     });
+    
+    const d1Total = diagonals[0];
+    const d2Total = diagonals[1];
 
     return (
       <Container >
@@ -122,15 +135,19 @@ export class MagicSquares extends Component {
         </Cells>
         <RowTotals>{rowTotals}</RowTotals>
         <ColumnTotals>
-          <Cell><span>{diagonals[0]}</span></Cell>
-          {columnTotals}
-          <Cell><span>{diagonals[1]}</span></Cell>
+          <Cell>
+            <Total isSolved={this.isSolved(diagonals[0])}>{d1Total ? d1Total : '' }</Total>
+          </Cell>
+            {columnTotals}
+          <Cell>
+            <Total isSolved={this.isSolved(diagonals[1])}>{d2Total ? d2Total : '' }</Total>
+          </Cell>
         </ColumnTotals>
       </Container>
     );
   }
 }
 
-export default connect(({ gridSize, grid, totals, activeElement }) => {
-  return { gridSize, grid, totals, activeElement };
+export default connect(({ gridSize, total, grid, totals, activeElement }) => {
+  return { gridSize, total, grid, totals, activeElement };
 }, { setGridSize, updateGrid })(MagicSquares);
