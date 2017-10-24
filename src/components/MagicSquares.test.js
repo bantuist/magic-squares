@@ -4,21 +4,19 @@ import { MagicSquares } from './MagicSquares';
 import Grid from '../helpers/Grid';
 
 const grid = new Grid(3);
+const mockSetGrid = jest.fn();
+const mockUpdateGrid = jest.fn();
+const props = {
+  activeElement: null,
+  gridSize: 3, 
+  total: 0,
+  grid: grid.setGrid(3),
+  totals: grid.getTotals(),
+  setGrid: mockSetGrid,
+  updateGrid: mockUpdateGrid
+};
 
 describe('MagicSquares', () => {
-  const mockSetGrid = jest.fn();
-  const mockUpdateGrid = jest.fn();
-
-  const props = {
-    activeElement: null,
-    gridSize: 3, 
-    total: 0,
-    grid: grid.setGrid(3),
-    totals: grid.getTotals(),
-    setGrid: mockSetGrid,
-    updateGrid: mockUpdateGrid
-  };
-
   const magicSquares = shallow(<MagicSquares {...props} />);
 
   it('renders without crashing', () => {
@@ -51,7 +49,6 @@ describe('MagicSquares', () => {
         value: action.value,
         activeElement: action.activeElement
       })).toEqual(initialState);
-      
     });
     
     xit("doesn't update the cell value in `state` with an empty string value", () => {
