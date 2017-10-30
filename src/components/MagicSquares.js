@@ -2,17 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setGridSize, updateGrid } from '../actions/magicSquares';
 import Board from './Board';
+import Controls from './Controls';
 import styled from 'styled-components';
 
 const Container = styled.div``;
-const Controls = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-const Button = styled.button`
-  cursor: pointer;
-  margin: 0 5px;
-`;
 
 export class MagicSquares extends Component {
   componentDidMount() {
@@ -20,9 +13,7 @@ export class MagicSquares extends Component {
     // console.log(this[`grid-cell-0`]);
     // this[`grid-cell-0`].focus();
   }
-  
   isCorrectTotal = total => total === this.props.total;
- 
   clue = () => {
     const { grid, solution } = this.props;
 
@@ -40,7 +31,6 @@ export class MagicSquares extends Component {
       );
     }
   }
-
   solve = () => {
     const { grid, solution } = this.props;
 
@@ -54,7 +44,6 @@ export class MagicSquares extends Component {
       );
     });
   }
-
   reset = () => {
     const { grid } = this.props;
   
@@ -70,7 +59,13 @@ export class MagicSquares extends Component {
   }
 
   render() {
-    const { gridSize, grid, totals } = this.props;
+    const { 
+      gridSize, 
+      grid, 
+      totals,
+      updateGrid,
+      activeElement,
+    } = this.props;
 
     return (
       <Container >
@@ -79,14 +74,14 @@ export class MagicSquares extends Component {
           grid={grid}
           totals={totals}
           onIsCorrectTotal={this.isCorrectTotal}
-          onUpdateGrid={this.props.updateGrid}
-          activeElement={this.props.activeElement}
+          onUpdateGrid={updateGrid}
+          activeElement={activeElement}
         />
-        <Controls>
-          <Button onClick={this.solve}>Solve</Button>
-          <Button onClick={this.clue}>Clue</Button>
-          <Button onClick={this.reset}>Reset</Button>
-        </Controls>
+        <Controls 
+          onSolve={this.solve}
+          onClue={this.clue}
+          onReset={this.reset}
+        />
       </Container>
     );
   }

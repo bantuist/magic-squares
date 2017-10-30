@@ -109,100 +109,77 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <styled.div
+        <Cells
+          grid={
+                    Object {
+                              "0": Object {
+                                "diagonal": "1",
+                                "id": 0,
+                                "value": 0,
+                                "x": 3,
+                                "y": 1,
+                              },
+                              "1": Object {
+                                "diagonal": "non-diagonal",
+                                "id": 1,
+                                "value": 0,
+                                "x": 3,
+                                "y": 2,
+                              },
+                              "2": Object {
+                                "diagonal": "2",
+                                "id": 2,
+                                "value": 0,
+                                "x": 3,
+                                "y": 3,
+                              },
+                              "3": Object {
+                                "diagonal": "non-diagonal",
+                                "id": 3,
+                                "value": 0,
+                                "x": 2,
+                                "y": 1,
+                              },
+                              "4": Object {
+                                "diagonal": "center",
+                                "id": 4,
+                                "value": 0,
+                                "x": 2,
+                                "y": 2,
+                              },
+                              "5": Object {
+                                "diagonal": "non-diagonal",
+                                "id": 5,
+                                "value": 0,
+                                "x": 2,
+                                "y": 3,
+                              },
+                              "6": Object {
+                                "diagonal": "2",
+                                "id": 6,
+                                "value": 0,
+                                "x": 1,
+                                "y": 1,
+                              },
+                              "7": Object {
+                                "diagonal": "non-diagonal",
+                                "id": 7,
+                                "value": 0,
+                                "x": 1,
+                                "y": 2,
+                              },
+                              "8": Object {
+                                "diagonal": "1",
+                                "id": 8,
+                                "value": 0,
+                                "x": 1,
+                                "y": 3,
+                              },
+                            }
+          }
           gridSize={3}
->
-          <styled.div>
-                    <styled.input
-                              className="grid-cell cell-0"
-                              innerRef={[Function]}
-                              isEven={false}
-                              maxLength="3"
-                              onChange={[Function]}
-                              value=""
-                    />
-          </styled.div>
-          <styled.div>
-                    <styled.input
-                              className="grid-cell cell-1"
-                              innerRef={[Function]}
-                              isEven={true}
-                              maxLength="3"
-                              onChange={[Function]}
-                              value=""
-                    />
-          </styled.div>
-          <styled.div>
-                    <styled.input
-                              className="grid-cell cell-2"
-                              innerRef={[Function]}
-                              isEven={false}
-                              maxLength="3"
-                              onChange={[Function]}
-                              value=""
-                    />
-          </styled.div>
-          <styled.div>
-                    <styled.input
-                              className="grid-cell cell-3"
-                              innerRef={[Function]}
-                              isEven={true}
-                              maxLength="3"
-                              onChange={[Function]}
-                              value=""
-                    />
-          </styled.div>
-          <styled.div>
-                    <styled.input
-                              className="grid-cell cell-4"
-                              innerRef={[Function]}
-                              isEven={false}
-                              maxLength="3"
-                              onChange={[Function]}
-                              value=""
-                    />
-          </styled.div>
-          <styled.div>
-                    <styled.input
-                              className="grid-cell cell-5"
-                              innerRef={[Function]}
-                              isEven={true}
-                              maxLength="3"
-                              onChange={[Function]}
-                              value=""
-                    />
-          </styled.div>
-          <styled.div>
-                    <styled.input
-                              className="grid-cell cell-6"
-                              innerRef={[Function]}
-                              isEven={false}
-                              maxLength="3"
-                              onChange={[Function]}
-                              value=""
-                    />
-          </styled.div>
-          <styled.div>
-                    <styled.input
-                              className="grid-cell cell-7"
-                              innerRef={[Function]}
-                              isEven={true}
-                              maxLength="3"
-                              onChange={[Function]}
-                              value=""
-                    />
-          </styled.div>
-          <styled.div>
-                    <styled.input
-                              className="grid-cell cell-8"
-                              innerRef={[Function]}
-                              isEven={false}
-                              maxLength="3"
-                              onChange={[Function]}
-                              value=""
-                    />
-          </styled.div>
-</styled.div>,
+          onUpdateGrid={undefined}
+/>,
         <RowTotals
           onIsCorrectTotal={undefined}
           rows={
@@ -239,400 +216,76 @@ ShallowWrapper {
         "key": null,
         "nodeType": "class",
         "props": Object {
-          "children": Array [
-            <styled.div>
-              <styled.input
-                            className="grid-cell cell-0"
-                            innerRef={[Function]}
-                            isEven={false}
-                            maxLength="3"
-                            onChange={[Function]}
-                            value=""
-              />
-</styled.div>,
-            <styled.div>
-              <styled.input
-                            className="grid-cell cell-1"
-                            innerRef={[Function]}
-                            isEven={true}
-                            maxLength="3"
-                            onChange={[Function]}
-                            value=""
-              />
-</styled.div>,
-            <styled.div>
-              <styled.input
-                            className="grid-cell cell-2"
-                            innerRef={[Function]}
-                            isEven={false}
-                            maxLength="3"
-                            onChange={[Function]}
-                            value=""
-              />
-</styled.div>,
-            <styled.div>
-              <styled.input
-                            className="grid-cell cell-3"
-                            innerRef={[Function]}
-                            isEven={true}
-                            maxLength="3"
-                            onChange={[Function]}
-                            value=""
-              />
-</styled.div>,
-            <styled.div>
-              <styled.input
-                            className="grid-cell cell-4"
-                            innerRef={[Function]}
-                            isEven={false}
-                            maxLength="3"
-                            onChange={[Function]}
-                            value=""
-              />
-</styled.div>,
-            <styled.div>
-              <styled.input
-                            className="grid-cell cell-5"
-                            innerRef={[Function]}
-                            isEven={true}
-                            maxLength="3"
-                            onChange={[Function]}
-                            value=""
-              />
-</styled.div>,
-            <styled.div>
-              <styled.input
-                            className="grid-cell cell-6"
-                            innerRef={[Function]}
-                            isEven={false}
-                            maxLength="3"
-                            onChange={[Function]}
-                            value=""
-              />
-</styled.div>,
-            <styled.div>
-              <styled.input
-                            className="grid-cell cell-7"
-                            innerRef={[Function]}
-                            isEven={true}
-                            maxLength="3"
-                            onChange={[Function]}
-                            value=""
-              />
-</styled.div>,
-            <styled.div>
-              <styled.input
-                            className="grid-cell cell-8"
-                            innerRef={[Function]}
-                            isEven={false}
-                            maxLength="3"
-                            onChange={[Function]}
-                            value=""
-              />
-</styled.div>,
-          ],
+          "grid": Object {
+            "0": Object {
+              "diagonal": "1",
+              "id": 0,
+              "value": 0,
+              "x": 3,
+              "y": 1,
+            },
+            "1": Object {
+              "diagonal": "non-diagonal",
+              "id": 1,
+              "value": 0,
+              "x": 3,
+              "y": 2,
+            },
+            "2": Object {
+              "diagonal": "2",
+              "id": 2,
+              "value": 0,
+              "x": 3,
+              "y": 3,
+            },
+            "3": Object {
+              "diagonal": "non-diagonal",
+              "id": 3,
+              "value": 0,
+              "x": 2,
+              "y": 1,
+            },
+            "4": Object {
+              "diagonal": "center",
+              "id": 4,
+              "value": 0,
+              "x": 2,
+              "y": 2,
+            },
+            "5": Object {
+              "diagonal": "non-diagonal",
+              "id": 5,
+              "value": 0,
+              "x": 2,
+              "y": 3,
+            },
+            "6": Object {
+              "diagonal": "2",
+              "id": 6,
+              "value": 0,
+              "x": 1,
+              "y": 1,
+            },
+            "7": Object {
+              "diagonal": "non-diagonal",
+              "id": 7,
+              "value": 0,
+              "x": 1,
+              "y": 2,
+            },
+            "8": Object {
+              "diagonal": "1",
+              "id": 8,
+              "value": 0,
+              "x": 1,
+              "y": 3,
+            },
+          },
           "gridSize": 3,
+          "onUpdateGrid": undefined,
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "0",
-            "nodeType": "class",
-            "props": Object {
-              "children": <styled.input
-                className="grid-cell cell-0"
-                innerRef={[Function]}
-                isEven={false}
-                maxLength="3"
-                onChange={[Function]}
-                value=""
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "className": "grid-cell cell-0",
-                "innerRef": [Function],
-                "isEven": false,
-                "maxLength": "3",
-                "onChange": [Function],
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "1",
-            "nodeType": "class",
-            "props": Object {
-              "children": <styled.input
-                className="grid-cell cell-1"
-                innerRef={[Function]}
-                isEven={true}
-                maxLength="3"
-                onChange={[Function]}
-                value=""
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "className": "grid-cell cell-1",
-                "innerRef": [Function],
-                "isEven": true,
-                "maxLength": "3",
-                "onChange": [Function],
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "2",
-            "nodeType": "class",
-            "props": Object {
-              "children": <styled.input
-                className="grid-cell cell-2"
-                innerRef={[Function]}
-                isEven={false}
-                maxLength="3"
-                onChange={[Function]}
-                value=""
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "className": "grid-cell cell-2",
-                "innerRef": [Function],
-                "isEven": false,
-                "maxLength": "3",
-                "onChange": [Function],
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "3",
-            "nodeType": "class",
-            "props": Object {
-              "children": <styled.input
-                className="grid-cell cell-3"
-                innerRef={[Function]}
-                isEven={true}
-                maxLength="3"
-                onChange={[Function]}
-                value=""
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "className": "grid-cell cell-3",
-                "innerRef": [Function],
-                "isEven": true,
-                "maxLength": "3",
-                "onChange": [Function],
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "4",
-            "nodeType": "class",
-            "props": Object {
-              "children": <styled.input
-                className="grid-cell cell-4"
-                innerRef={[Function]}
-                isEven={false}
-                maxLength="3"
-                onChange={[Function]}
-                value=""
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "className": "grid-cell cell-4",
-                "innerRef": [Function],
-                "isEven": false,
-                "maxLength": "3",
-                "onChange": [Function],
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "5",
-            "nodeType": "class",
-            "props": Object {
-              "children": <styled.input
-                className="grid-cell cell-5"
-                innerRef={[Function]}
-                isEven={true}
-                maxLength="3"
-                onChange={[Function]}
-                value=""
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "className": "grid-cell cell-5",
-                "innerRef": [Function],
-                "isEven": true,
-                "maxLength": "3",
-                "onChange": [Function],
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "6",
-            "nodeType": "class",
-            "props": Object {
-              "children": <styled.input
-                className="grid-cell cell-6"
-                innerRef={[Function]}
-                isEven={false}
-                maxLength="3"
-                onChange={[Function]}
-                value=""
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "className": "grid-cell cell-6",
-                "innerRef": [Function],
-                "isEven": false,
-                "maxLength": "3",
-                "onChange": [Function],
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "7",
-            "nodeType": "class",
-            "props": Object {
-              "children": <styled.input
-                className="grid-cell cell-7"
-                innerRef={[Function]}
-                isEven={true}
-                maxLength="3"
-                onChange={[Function]}
-                value=""
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "className": "grid-cell cell-7",
-                "innerRef": [Function],
-                "isEven": true,
-                "maxLength": "3",
-                "onChange": [Function],
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "8",
-            "nodeType": "class",
-            "props": Object {
-              "children": <styled.input
-                className="grid-cell cell-8"
-                innerRef={[Function]}
-                isEven={false}
-                maxLength="3"
-                onChange={[Function]}
-                value=""
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "className": "grid-cell cell-8",
-                "innerRef": [Function],
-                "isEven": false,
-                "maxLength": "3",
-                "onChange": [Function],
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-        ],
+        "rendered": null,
         "type": [Function],
       },
       Object {
@@ -681,100 +334,77 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <styled.div
+          <Cells
+            grid={
+                        Object {
+                                    "0": Object {
+                                      "diagonal": "1",
+                                      "id": 0,
+                                      "value": 0,
+                                      "x": 3,
+                                      "y": 1,
+                                    },
+                                    "1": Object {
+                                      "diagonal": "non-diagonal",
+                                      "id": 1,
+                                      "value": 0,
+                                      "x": 3,
+                                      "y": 2,
+                                    },
+                                    "2": Object {
+                                      "diagonal": "2",
+                                      "id": 2,
+                                      "value": 0,
+                                      "x": 3,
+                                      "y": 3,
+                                    },
+                                    "3": Object {
+                                      "diagonal": "non-diagonal",
+                                      "id": 3,
+                                      "value": 0,
+                                      "x": 2,
+                                      "y": 1,
+                                    },
+                                    "4": Object {
+                                      "diagonal": "center",
+                                      "id": 4,
+                                      "value": 0,
+                                      "x": 2,
+                                      "y": 2,
+                                    },
+                                    "5": Object {
+                                      "diagonal": "non-diagonal",
+                                      "id": 5,
+                                      "value": 0,
+                                      "x": 2,
+                                      "y": 3,
+                                    },
+                                    "6": Object {
+                                      "diagonal": "2",
+                                      "id": 6,
+                                      "value": 0,
+                                      "x": 1,
+                                      "y": 1,
+                                    },
+                                    "7": Object {
+                                      "diagonal": "non-diagonal",
+                                      "id": 7,
+                                      "value": 0,
+                                      "x": 1,
+                                      "y": 2,
+                                    },
+                                    "8": Object {
+                                      "diagonal": "1",
+                                      "id": 8,
+                                      "value": 0,
+                                      "x": 1,
+                                      "y": 3,
+                                    },
+                                  }
+            }
             gridSize={3}
->
-            <styled.div>
-                        <styled.input
-                                    className="grid-cell cell-0"
-                                    innerRef={[Function]}
-                                    isEven={false}
-                                    maxLength="3"
-                                    onChange={[Function]}
-                                    value=""
-                        />
-            </styled.div>
-            <styled.div>
-                        <styled.input
-                                    className="grid-cell cell-1"
-                                    innerRef={[Function]}
-                                    isEven={true}
-                                    maxLength="3"
-                                    onChange={[Function]}
-                                    value=""
-                        />
-            </styled.div>
-            <styled.div>
-                        <styled.input
-                                    className="grid-cell cell-2"
-                                    innerRef={[Function]}
-                                    isEven={false}
-                                    maxLength="3"
-                                    onChange={[Function]}
-                                    value=""
-                        />
-            </styled.div>
-            <styled.div>
-                        <styled.input
-                                    className="grid-cell cell-3"
-                                    innerRef={[Function]}
-                                    isEven={true}
-                                    maxLength="3"
-                                    onChange={[Function]}
-                                    value=""
-                        />
-            </styled.div>
-            <styled.div>
-                        <styled.input
-                                    className="grid-cell cell-4"
-                                    innerRef={[Function]}
-                                    isEven={false}
-                                    maxLength="3"
-                                    onChange={[Function]}
-                                    value=""
-                        />
-            </styled.div>
-            <styled.div>
-                        <styled.input
-                                    className="grid-cell cell-5"
-                                    innerRef={[Function]}
-                                    isEven={true}
-                                    maxLength="3"
-                                    onChange={[Function]}
-                                    value=""
-                        />
-            </styled.div>
-            <styled.div>
-                        <styled.input
-                                    className="grid-cell cell-6"
-                                    innerRef={[Function]}
-                                    isEven={false}
-                                    maxLength="3"
-                                    onChange={[Function]}
-                                    value=""
-                        />
-            </styled.div>
-            <styled.div>
-                        <styled.input
-                                    className="grid-cell cell-7"
-                                    innerRef={[Function]}
-                                    isEven={true}
-                                    maxLength="3"
-                                    onChange={[Function]}
-                                    value=""
-                        />
-            </styled.div>
-            <styled.div>
-                        <styled.input
-                                    className="grid-cell cell-8"
-                                    innerRef={[Function]}
-                                    isEven={false}
-                                    maxLength="3"
-                                    onChange={[Function]}
-                                    value=""
-                        />
-            </styled.div>
-</styled.div>,
+            onUpdateGrid={undefined}
+/>,
           <RowTotals
             onIsCorrectTotal={undefined}
             rows={
@@ -811,400 +441,76 @@ ShallowWrapper {
           "key": null,
           "nodeType": "class",
           "props": Object {
-            "children": Array [
-              <styled.div>
-                <styled.input
-                                className="grid-cell cell-0"
-                                innerRef={[Function]}
-                                isEven={false}
-                                maxLength="3"
-                                onChange={[Function]}
-                                value=""
-                />
-</styled.div>,
-              <styled.div>
-                <styled.input
-                                className="grid-cell cell-1"
-                                innerRef={[Function]}
-                                isEven={true}
-                                maxLength="3"
-                                onChange={[Function]}
-                                value=""
-                />
-</styled.div>,
-              <styled.div>
-                <styled.input
-                                className="grid-cell cell-2"
-                                innerRef={[Function]}
-                                isEven={false}
-                                maxLength="3"
-                                onChange={[Function]}
-                                value=""
-                />
-</styled.div>,
-              <styled.div>
-                <styled.input
-                                className="grid-cell cell-3"
-                                innerRef={[Function]}
-                                isEven={true}
-                                maxLength="3"
-                                onChange={[Function]}
-                                value=""
-                />
-</styled.div>,
-              <styled.div>
-                <styled.input
-                                className="grid-cell cell-4"
-                                innerRef={[Function]}
-                                isEven={false}
-                                maxLength="3"
-                                onChange={[Function]}
-                                value=""
-                />
-</styled.div>,
-              <styled.div>
-                <styled.input
-                                className="grid-cell cell-5"
-                                innerRef={[Function]}
-                                isEven={true}
-                                maxLength="3"
-                                onChange={[Function]}
-                                value=""
-                />
-</styled.div>,
-              <styled.div>
-                <styled.input
-                                className="grid-cell cell-6"
-                                innerRef={[Function]}
-                                isEven={false}
-                                maxLength="3"
-                                onChange={[Function]}
-                                value=""
-                />
-</styled.div>,
-              <styled.div>
-                <styled.input
-                                className="grid-cell cell-7"
-                                innerRef={[Function]}
-                                isEven={true}
-                                maxLength="3"
-                                onChange={[Function]}
-                                value=""
-                />
-</styled.div>,
-              <styled.div>
-                <styled.input
-                                className="grid-cell cell-8"
-                                innerRef={[Function]}
-                                isEven={false}
-                                maxLength="3"
-                                onChange={[Function]}
-                                value=""
-                />
-</styled.div>,
-            ],
+            "grid": Object {
+              "0": Object {
+                "diagonal": "1",
+                "id": 0,
+                "value": 0,
+                "x": 3,
+                "y": 1,
+              },
+              "1": Object {
+                "diagonal": "non-diagonal",
+                "id": 1,
+                "value": 0,
+                "x": 3,
+                "y": 2,
+              },
+              "2": Object {
+                "diagonal": "2",
+                "id": 2,
+                "value": 0,
+                "x": 3,
+                "y": 3,
+              },
+              "3": Object {
+                "diagonal": "non-diagonal",
+                "id": 3,
+                "value": 0,
+                "x": 2,
+                "y": 1,
+              },
+              "4": Object {
+                "diagonal": "center",
+                "id": 4,
+                "value": 0,
+                "x": 2,
+                "y": 2,
+              },
+              "5": Object {
+                "diagonal": "non-diagonal",
+                "id": 5,
+                "value": 0,
+                "x": 2,
+                "y": 3,
+              },
+              "6": Object {
+                "diagonal": "2",
+                "id": 6,
+                "value": 0,
+                "x": 1,
+                "y": 1,
+              },
+              "7": Object {
+                "diagonal": "non-diagonal",
+                "id": 7,
+                "value": 0,
+                "x": 1,
+                "y": 2,
+              },
+              "8": Object {
+                "diagonal": "1",
+                "id": 8,
+                "value": 0,
+                "x": 1,
+                "y": 3,
+              },
+            },
             "gridSize": 3,
+            "onUpdateGrid": undefined,
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "0",
-              "nodeType": "class",
-              "props": Object {
-                "children": <styled.input
-                  className="grid-cell cell-0"
-                  innerRef={[Function]}
-                  isEven={false}
-                  maxLength="3"
-                  onChange={[Function]}
-                  value=""
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "grid-cell cell-0",
-                  "innerRef": [Function],
-                  "isEven": false,
-                  "maxLength": "3",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "1",
-              "nodeType": "class",
-              "props": Object {
-                "children": <styled.input
-                  className="grid-cell cell-1"
-                  innerRef={[Function]}
-                  isEven={true}
-                  maxLength="3"
-                  onChange={[Function]}
-                  value=""
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "grid-cell cell-1",
-                  "innerRef": [Function],
-                  "isEven": true,
-                  "maxLength": "3",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "2",
-              "nodeType": "class",
-              "props": Object {
-                "children": <styled.input
-                  className="grid-cell cell-2"
-                  innerRef={[Function]}
-                  isEven={false}
-                  maxLength="3"
-                  onChange={[Function]}
-                  value=""
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "grid-cell cell-2",
-                  "innerRef": [Function],
-                  "isEven": false,
-                  "maxLength": "3",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "3",
-              "nodeType": "class",
-              "props": Object {
-                "children": <styled.input
-                  className="grid-cell cell-3"
-                  innerRef={[Function]}
-                  isEven={true}
-                  maxLength="3"
-                  onChange={[Function]}
-                  value=""
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "grid-cell cell-3",
-                  "innerRef": [Function],
-                  "isEven": true,
-                  "maxLength": "3",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "4",
-              "nodeType": "class",
-              "props": Object {
-                "children": <styled.input
-                  className="grid-cell cell-4"
-                  innerRef={[Function]}
-                  isEven={false}
-                  maxLength="3"
-                  onChange={[Function]}
-                  value=""
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "grid-cell cell-4",
-                  "innerRef": [Function],
-                  "isEven": false,
-                  "maxLength": "3",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "5",
-              "nodeType": "class",
-              "props": Object {
-                "children": <styled.input
-                  className="grid-cell cell-5"
-                  innerRef={[Function]}
-                  isEven={true}
-                  maxLength="3"
-                  onChange={[Function]}
-                  value=""
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "grid-cell cell-5",
-                  "innerRef": [Function],
-                  "isEven": true,
-                  "maxLength": "3",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "6",
-              "nodeType": "class",
-              "props": Object {
-                "children": <styled.input
-                  className="grid-cell cell-6"
-                  innerRef={[Function]}
-                  isEven={false}
-                  maxLength="3"
-                  onChange={[Function]}
-                  value=""
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "grid-cell cell-6",
-                  "innerRef": [Function],
-                  "isEven": false,
-                  "maxLength": "3",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "7",
-              "nodeType": "class",
-              "props": Object {
-                "children": <styled.input
-                  className="grid-cell cell-7"
-                  innerRef={[Function]}
-                  isEven={true}
-                  maxLength="3"
-                  onChange={[Function]}
-                  value=""
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "grid-cell cell-7",
-                  "innerRef": [Function],
-                  "isEven": true,
-                  "maxLength": "3",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "8",
-              "nodeType": "class",
-              "props": Object {
-                "children": <styled.input
-                  className="grid-cell cell-8"
-                  innerRef={[Function]}
-                  isEven={false}
-                  maxLength="3"
-                  onChange={[Function]}
-                  value=""
-/>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "grid-cell cell-8",
-                  "innerRef": [Function],
-                  "isEven": false,
-                  "maxLength": "3",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-          ],
+          "rendered": null,
           "type": [Function],
         },
         Object {
