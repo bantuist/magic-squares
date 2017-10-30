@@ -20,9 +20,9 @@ ShallowWrapper {
       "children": Array [
         <Board
           activeElement={undefined}
+          boardTotal={undefined}
           grid={undefined}
           gridSize={undefined}
-          onIsCorrectTotal={[Function]}
           onUpdateGrid={undefined}
           totals={undefined}
 />,
@@ -41,9 +41,9 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "activeElement": undefined,
+          "boardTotal": undefined,
           "grid": undefined,
           "gridSize": undefined,
-          "onIsCorrectTotal": [Function],
           "onUpdateGrid": undefined,
           "totals": undefined,
         },
@@ -76,9 +76,9 @@ ShallowWrapper {
         "children": Array [
           <Board
             activeElement={undefined}
+            boardTotal={undefined}
             grid={undefined}
             gridSize={undefined}
-            onIsCorrectTotal={[Function]}
             onUpdateGrid={undefined}
             totals={undefined}
 />,
@@ -97,9 +97,9 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "activeElement": undefined,
+            "boardTotal": undefined,
             "grid": undefined,
             "gridSize": undefined,
-            "onIsCorrectTotal": [Function],
             "onUpdateGrid": undefined,
             "totals": undefined,
           },

@@ -8,12 +8,6 @@ import styled from 'styled-components';
 const Container = styled.div``;
 
 export class MagicSquares extends Component {
-  componentDidMount() {
-    // QUESTION: Why can't I focus this here?
-    // console.log(this[`grid-cell-0`]);
-    // this[`grid-cell-0`].focus();
-  }
-  isCorrectTotal = total => total === this.props.total;
   clue = () => {
     const { grid, solution } = this.props;
 
@@ -63,6 +57,7 @@ export class MagicSquares extends Component {
       gridSize, 
       grid, 
       totals,
+      total,
       updateGrid,
       activeElement,
     } = this.props;
@@ -73,7 +68,7 @@ export class MagicSquares extends Component {
           gridSize={gridSize} 
           grid={grid}
           totals={totals}
-          onIsCorrectTotal={this.isCorrectTotal}
+          boardTotal={total}
           onUpdateGrid={updateGrid}
           activeElement={activeElement}
         />

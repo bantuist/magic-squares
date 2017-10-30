@@ -27,6 +27,11 @@ const Input = styled.input`
 `;
 
 class Cells extends Component {
+  componentDidMount() {
+    if (this.props.activeElement) {
+      this[this.props.activeElement].focus();
+    }
+  }
   componentDidUpdate() {
     if (this.props.activeElement) {
       const active = this[this.props.activeElement];
@@ -62,14 +67,14 @@ class Cells extends Component {
       
       return (
         <Cell key={cell.id}>
-        <Input
-          className={cellClassName}
-          isEven={isEven(i + 1)}
-          maxLength="3"
-          innerRef={comp => this[`grid-cell cell-${cell.id}`] = comp}
-          onChange={event => handleChange(event, cell.id)}
-          value={cell.value ? cell.value : '' }
-        />
+          <Input
+            className={cellClassName}
+            isEven={isEven(i + 1)}
+            maxLength="3"
+            innerRef={comp => this[`grid-cell cell-${cell.id}`] = comp}
+            onChange={event => handleChange(event, cell.id)}
+            value={cell.value ? cell.value : '' }
+          />
         </Cell>
       );
     });

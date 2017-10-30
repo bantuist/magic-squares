@@ -110,6 +110,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Cells
+          activeElement={null}
           grid={
                     Object {
                               "0": Object {
@@ -181,7 +182,7 @@ ShallowWrapper {
           onUpdateGrid={undefined}
 />,
         <RowTotals
-          onIsCorrectTotal={undefined}
+          onIsCorrectTotal={[Function]}
           rows={
                     Object {
                               "1": 0,
@@ -204,7 +205,7 @@ ShallowWrapper {
                               0,
                             ]
           }
-          onIsCorrectTotal={undefined}
+          onIsCorrectTotal={[Function]}
 />,
       ],
       "gridSize": 3,
@@ -216,6 +217,7 @@ ShallowWrapper {
         "key": null,
         "nodeType": "class",
         "props": Object {
+          "activeElement": null,
           "grid": Object {
             "0": Object {
               "diagonal": "1",
@@ -293,7 +295,7 @@ ShallowWrapper {
         "key": null,
         "nodeType": "function",
         "props": Object {
-          "onIsCorrectTotal": undefined,
+          "onIsCorrectTotal": [Function],
           "rows": Object {
             "1": 0,
             "2": 0,
@@ -318,7 +320,7 @@ ShallowWrapper {
             0,
             0,
           ],
-          "onIsCorrectTotal": undefined,
+          "onIsCorrectTotal": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -335,6 +337,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Cells
+            activeElement={null}
             grid={
                         Object {
                                     "0": Object {
@@ -406,7 +409,7 @@ ShallowWrapper {
             onUpdateGrid={undefined}
 />,
           <RowTotals
-            onIsCorrectTotal={undefined}
+            onIsCorrectTotal={[Function]}
             rows={
                         Object {
                                     "1": 0,
@@ -429,7 +432,7 @@ ShallowWrapper {
                                     0,
                                   ]
             }
-            onIsCorrectTotal={undefined}
+            onIsCorrectTotal={[Function]}
 />,
         ],
         "gridSize": 3,
@@ -441,6 +444,7 @@ ShallowWrapper {
           "key": null,
           "nodeType": "class",
           "props": Object {
+            "activeElement": null,
             "grid": Object {
               "0": Object {
                 "diagonal": "1",
@@ -518,7 +522,7 @@ ShallowWrapper {
           "key": null,
           "nodeType": "function",
           "props": Object {
-            "onIsCorrectTotal": undefined,
+            "onIsCorrectTotal": [Function],
             "rows": Object {
               "1": 0,
               "2": 0,
@@ -543,7 +547,7 @@ ShallowWrapper {
               0,
               0,
             ],
-            "onIsCorrectTotal": undefined,
+            "onIsCorrectTotal": [Function],
           },
           "ref": null,
           "rendered": null,

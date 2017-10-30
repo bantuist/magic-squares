@@ -12,17 +12,41 @@ const Container = styled.div`
   grid-template-rows: 3fr 1fr;
 `;
 
-const Board = ({ gridSize, grid, totals, onIsCorrectTotal, onUpdateGrid }) => {
+const Board = ({ 
+  gridSize, 
+  grid, 
+  activeElement,
+  totals, 
+  boardTotal, 
+  onUpdateGrid 
+}) => {
   const { columns, rows, diagonals } = totals;
+  // const isFull = () => {
+  //   const targetCells = Object.keys(grid).filter(key => {
+  //     const cell = grid[key];
+  //     // console.log(cell);
+  //     // TODO: return 
+  //   });
+    // return targetCells.length === gridSize;
+  // };
+  const isCorrectTotal = total => {
+    // isFull();
+    return total === boardTotal;
+  };
   
   return (
     <Container gridSize={gridSize}> 
-      <Cells gridSize={gridSize} grid={grid} onUpdateGrid={onUpdateGrid} />
-      <RowTotals rows={rows} onIsCorrectTotal={onIsCorrectTotal} />
+      <Cells 
+        gridSize={gridSize} 
+        grid={grid} 
+        activeElement={activeElement}
+        onUpdateGrid={onUpdateGrid} 
+      />
+      <RowTotals rows={rows} onIsCorrectTotal={isCorrectTotal} />
       <ColumnTotals 
         columns={columns} 
         diagonals={diagonals} 
-        onIsCorrectTotal={onIsCorrectTotal} 
+        onIsCorrectTotal={isCorrectTotal} 
       />
     </Container>
   );

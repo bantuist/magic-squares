@@ -4,7 +4,7 @@ import Grid from '../helpers/Grid';
 const grid = new Grid(3);
 
 const initialState = {
-  activeElement: null,
+  activeElement: 'grid-cell cell-0',
   gridSize: grid.gridSize, 
   total: grid.total,
   solution: [ 4, 9, 2, 3, 5, 7, 8, 1, 6 ], // TODO: write solution algorithm
