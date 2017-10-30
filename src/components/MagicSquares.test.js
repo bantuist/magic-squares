@@ -39,7 +39,6 @@ describe('MagicSquares', () => {
       // expect(magicSquares.state().grid['1'].value).toEqual(parseInt(value, 10));
     });
 
-
     xit("doesn't update the cell value in `state` with a NaN value", () => {
       const action = { id: 4, value: NaN, activeElement: null };
       
@@ -64,13 +63,38 @@ describe('MagicSquares', () => {
       
   });
 
-  describe('when a column has a correct total', () => {
+  describe('when a row is full', () => {
+    // let cells = magicSquares.find('.grid-cell');
+    // const row1 = Object.keys(cells).filter((key, i) => {
+      // console.log(key, i);
+      // return i < grid.gridSize;
+    // });
+    // console.log(row1);
+    describe('and has a correct total', () => {
+      // fill row with correct total
+      // expect total color to be green
+    });
+    describe('and has an incorrect total', () => {
+      // fill row with incorrect total
+      // expect total color to be red
+    });
   });
-  describe('when a row has a correct total', () => {
-
+  describe('when a column is full', () => {
+    describe('and has a correct total', () => {
+  
+    });
+    describe('and has an incorrect total', () => {
+  
+    });
   });
-  describe('when a diagonal has a correct total', () => {
+  describe('when a diagonal is full', () => {
+    describe('and has a correct total', () => {
 
+    });
+
+    describe('and has an incorrect total', () => {
+
+    });
   });
   describe('when solved', () => {
 

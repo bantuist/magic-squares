@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setGridSize, updateGrid } from '../actions/magicSquares';
+import RowTotals from './RowTotals';
+import ColumnTotals from './ColumnTotals';
 import styled from 'styled-components';
 
 const Container = styled.div``;
@@ -16,21 +18,6 @@ const Cells = styled.div`
   display: grid;
   grid-template-columns: repeat(${({ gridSize }) => gridSize}, 100px);
   grid-auto-rows: 100px;
-`;
-const RowTotals = styled.div`
-  font-size: 1.5em;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-`;
-const ColumnTotals = styled.div`
-  font-size: 1.5em;
-  grid-column: 1/4;
-  display: flex;
-  flex-direction: row;
-`;
-const Total = styled.span`
-  color: ${({ isCorrectTotal }) => isCorrectTotal ? '#7AE582' : '#FF5A5F'};
 `;
 const Cell = styled.div`
   height: 100%;
@@ -172,45 +159,18 @@ export class MagicSquares extends Component {
       );
     });
 
-    const rowTotals = Object.keys(rows).map(key => {
-      const total = rows[key];
-        
-      return (
-        <Cell key={key} className="row-total">
-          <Total isCorrectTotal={this.isCorrectTotal(total)}>{total ? total : '' }</Total>
-        </Cell>
-      );
-    });
-
-    const columnTotals = Object.keys(columns).map(key => {
-      const total = columns[key];
-
-      return (
-        <Cell key={key} className="row-total">
-          <Total isCorrectTotal={this.isCorrectTotal(total)}>{total ? total : '' }</Total>
-        </Cell>
-      );
-    });
-    
-    const d1Total = diagonals[0];
-    const d2Total = diagonals[1];
-
     return (
       <Container >
         <Board gridSize={gridSize}> 
           <Cells gridSize={gridSize}>
             {cells}
           </Cells>
-          <RowTotals>{rowTotals}</RowTotals>
-          <ColumnTotals>
-            <Cell>
-              <Total isCorrectTotal={this.isCorrectTotal(diagonals[0])}>{d1Total ? d1Total : '' }</Total>
-            </Cell>
-              {columnTotals}
-            <Cell>
-              <Total isCorrectTotal={this.isCorrectTotal(diagonals[1])}>{d2Total ? d2Total : '' }</Total>
-            </Cell>
-          </ColumnTotals>
+          <RowTotals rows={rows} onCorrectTotal={this.isCorrectTotal} />
+          <ColumnTotals 
+            columns={columns} 
+            diagonals={diagonals} 
+            onCorrectTotal={this.isCorrectTotal} 
+          />
         </Board>
         <Controls>
           <Button onClick={this.solve}>Solve</Button>
