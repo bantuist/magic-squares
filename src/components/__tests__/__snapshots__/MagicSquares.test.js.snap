@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MagicSquares renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MagicSquares />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Board
+          activeElement={undefined}
+          grid={undefined}
+          gridSize={undefined}
+          onIsCorrectTotal={[Function]}
+          onUpdateGrid={undefined}
+          totals={undefined}
+/>,
+        <styled.div>
+          <styled.button
+                    onClick={[Function]}
+          >
+                    Solve
+          </styled.button>
+          <styled.button
+                    onClick={[Function]}
+          >
+                    Clue
+          </styled.button>
+          <styled.button
+                    onClick={[Function]}
+          >
+                    Reset
+          </styled.button>
+</styled.div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "activeElement": undefined,
+          "grid": undefined,
+          "gridSize": undefined,
+          "onIsCorrectTotal": [Function],
+          "onUpdateGrid": undefined,
+          "totals": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <styled.button
+              onClick={[Function]}
+>
+              Solve
+</styled.button>,
+            <styled.button
+              onClick={[Function]}
+>
+              Clue
+</styled.button>,
+            <styled.button
+              onClick={[Function]}
+>
+              Reset
+</styled.button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Solve",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Solve",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Clue",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Clue",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Reset",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Reset",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Board
+            activeElement={undefined}
+            grid={undefined}
+            gridSize={undefined}
+            onIsCorrectTotal={[Function]}
+            onUpdateGrid={undefined}
+            totals={undefined}
+/>,
+          <styled.div>
+            <styled.button
+                        onClick={[Function]}
+            >
+                        Solve
+            </styled.button>
+            <styled.button
+                        onClick={[Function]}
+            >
+                        Clue
+            </styled.button>
+            <styled.button
+                        onClick={[Function]}
+            >
+                        Reset
+            </styled.button>
+</styled.div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "activeElement": undefined,
+            "grid": undefined,
+            "gridSize": undefined,
+            "onIsCorrectTotal": [Function],
+            "onUpdateGrid": undefined,
+            "totals": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <styled.button
+                onClick={[Function]}
+>
+                Solve
+</styled.button>,
+              <styled.button
+                onClick={[Function]}
+>
+                Clue
+</styled.button>,
+              <styled.button
+                onClick={[Function]}
+>
+                Reset
+</styled.button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Solve",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Solve",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Clue",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Clue",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Reset",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Reset",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

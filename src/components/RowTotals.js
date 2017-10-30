@@ -18,13 +18,13 @@ const Total = styled.span`
   color: ${({ isCorrectTotal }) => isCorrectTotal ? '#7AE582' : '#FF5A5F'};
 `;
 
-const RowTotals = ({ rows, onCorrectTotal }) => {
+const RowTotals = ({ rows, onIsCorrectTotal }) => {
   const rowTotals = Object.keys(rows).map(key => {
     const total = rows[key];
 
     return (
       <Cell key={key} className="total">
-        <Total isCorrectTotal={onCorrectTotal(total)}>{total ? total : '' }</Total>
+        <Total isCorrectTotal={onIsCorrectTotal(total)}>{total ? total : '' }</Total>
       </Cell>
     );
   });

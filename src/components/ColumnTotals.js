@@ -18,13 +18,13 @@ const Total = styled.span`
   color: ${({ isCorrectTotal }) => isCorrectTotal ? '#7AE582' : '#FF5A5F'};
 `;
 
-const ColumnTotals = ({ columns, diagonals, onCorrectTotal }) => {
+const ColumnTotals = ({ columns, diagonals, onIsCorrectTotal }) => {
   const columnTotals = Object.keys(columns).map(key => {
     const total = columns[key];
 
     return (
       <Cell key={key} className="total">
-        <Total isCorrectTotal={onCorrectTotal(total)}>{total ? total : '' }</Total>
+        <Total isCorrectTotal={onIsCorrectTotal(total)}>{total ? total : '' }</Total>
       </Cell>
     );
   });
@@ -35,11 +35,11 @@ const ColumnTotals = ({ columns, diagonals, onCorrectTotal }) => {
   return (
     <Columns>
       <Cell>
-        <Total isCorrectTotal={onCorrectTotal(diagonals[0])}>{d1Total ? d1Total : '' }</Total>
+        <Total isCorrectTotal={onIsCorrectTotal(diagonals[0])}>{d1Total ? d1Total : '' }</Total>
       </Cell>
       {columnTotals}
       <Cell>
-        <Total isCorrectTotal={onCorrectTotal(diagonals[1])}>{d2Total ? d2Total : '' }</Total>
+        <Total isCorrectTotal={onIsCorrectTotal(diagonals[1])}>{d2Total ? d2Total : '' }</Total>
       </Cell>
     </Columns>
   );

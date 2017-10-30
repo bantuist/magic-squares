@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MagicSquares } from './MagicSquares';
-import Grid from '../helpers/Grid';
+import Board from '../Board';
+import Grid from '../../helpers/Grid';
 
 const grid = new Grid(3);
 const mockSetGrid = jest.fn();
@@ -16,27 +16,27 @@ const props = {
   updateGrid: mockUpdateGrid
 };
 
-describe('MagicSquares', () => {
-  const magicSquares = shallow(<MagicSquares {...props} />);
+describe('Board', () => {
+  const board = shallow(<Board {...props} />);
 
   it('renders without crashing', () => {
-    expect(magicSquares).toMatchSnapshot();
+    expect(board).toMatchSnapshot();
   });
 
   it('contains a the correct number of cells', () => {
-    expect(magicSquares.find('.grid-cell').length).toEqual(9);
+    expect(board.find('.grid-cell').length).toEqual(9);
   });
 
   describe('when the user types into the cell input', () => {
     const value = 5;
 
     beforeEach(() => {
-      magicSquares.find('.cell-1').simulate('change', { target: { value }});
+      board.find('.cell-1').simulate('change', { target: { value }});
     });
 
     xit('updates the cell value in `state` as a number', () => {
-      console.log(magicSquares.state().grid) ;
-      // expect(magicSquares.state().grid['1'].value).toEqual(parseInt(value, 10));
+      console.log(board.state().grid) ;
+      // expect(board.state().grid['1'].value).toEqual(parseInt(value, 10));
     });
 
     xit("doesn't update the cell value in `state` with a NaN value", () => {
@@ -64,7 +64,7 @@ describe('MagicSquares', () => {
   });
 
   describe('when a row is full', () => {
-    // let cells = magicSquares.find('.grid-cell');
+    // let cells = board.find('.grid-cell');
     // const row1 = Object.keys(cells).filter((key, i) => {
       // console.log(key, i);
       // return i < grid.gridSize;
