@@ -1,25 +1,25 @@
+import { activeElement } from '../data/fixtures';
+import { triangular } from '../helpers';
 
 export default class Grid {
   constructor(gridSize) {
+    this.activeElement = activeElement;
+    this.cells = this.setCells(gridSize);
     this.gridSize = gridSize;
+    this.solution = [ 4, 9, 2, 3, 5, 7, 8, 1, 6 ];
+    // this.solution = this.getSolution(gridSize);
     this.total = this.setTotal(gridSize);
-    this.grid = {};
-    this.totals = { rows: {}, columns: {}, diagonals: {} };
+    this.totals = { columns: {}, rows: {}, diagonals: {} };
   }
   isEven = gridSize => gridSize % 2 === 0;
   isCenter = point => Math.ceil(this.gridSize / 2) === point;
 
   setTotal(gridSize) {
-    let total = 0;
-
-    for(let i = 1; i <= gridSize * gridSize; i++) {
-      total += i;
-    };
-
-    return total / gridSize;
+    const cellCount = gridSize * gridSize;
+    return triangular(cellCount, cellCount) / gridSize;
   };
 
-  setGrid(gridSize) {
+  setCells(gridSize) {
     const cell = { x: gridSize + 1, y: 0};
     
     for(let i = 0; i < gridSize * gridSize; i++) {
@@ -50,29 +50,29 @@ export default class Grid {
         cell.diagonal = 'non-diagonal';
       }
 
-      this.grid = { 
-        ...this.grid,
+      this.cells = { 
+        ...this.cells,
         [cell.id]: {
           ...cell
         }
       };
     }
 
-    return this.grid;
+    return this.cells;
   }
 
   updateGrid(id, value) {
-    this.grid[id].value = value;
-    return this.grid;
+    this.cells[id].value = value;
+    return this.cells;
   }
 
   getTotals() {
-    let { grid, gridSize } = this;
+    let { cells, gridSize } = this;
     let row, column;
     let rows, columns, diagonals;
 
-    Object.keys(grid).forEach((key, i) => {
-      let cell = grid[key];
+    Object.keys(cells).forEach((key, i) => {
+      let cell = cells[key];
       let { x, y, value } = cell;
 
       rows = rows ? rows : {};

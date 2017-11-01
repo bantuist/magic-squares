@@ -1,15 +1,15 @@
 import * as constants from '../actions/constants';
-import Grid from '../helpers/Grid';
+import Grid from '../grid/Grid';
 
 const grid = new Grid(3);
 
 const initialState = {
-  activeElement: 'grid-cell cell-0',
+  activeElement: grid.activeElement,
+  cells: grid.setCells(grid.gridSize),
   gridSize: grid.gridSize, 
+  solution: [ 4, 9, 2, 3, 5, 7, 8, 1, 6 ], // grid.getSolution(gridSize) TODO: write solution algorithm
   total: grid.total,
-  solution: [ 4, 9, 2, 3, 5, 7, 8, 1, 6 ], // TODO: write solution algorithm
-  grid: grid.setGrid(grid.gridSize),
-  totals: grid.getTotals() 
+  totals: grid.getTotals()  // TODO: switch to arrays
 };
 
 const magicSquares = (state = initialState, action) => {
@@ -20,7 +20,7 @@ const magicSquares = (state = initialState, action) => {
       return action.gridSize;
     // case constants.DEFINE_GRID:
     case constants.SET_GRID:
-      return grid.setGrid(action.gridSize);
+      return grid.setCells(action.gridSize);
     case constants.UPDATE_GRID:
       return {
         ...state,

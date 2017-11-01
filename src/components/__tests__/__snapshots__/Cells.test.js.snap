@@ -5,8 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Cells
-    activeElement={null}
-    grid={
+    activeElement="grid-cell cell-0"
+    cells={
         Object {
             "0": Object {
               "diagonal": "1",
@@ -37,7 +37,7 @@ ShallowWrapper {
               "y": 1,
             },
             "4": Object {
-              "diagonal": "center",
+              "diagonal": "1",
               "id": 4,
               "value": 0,
               "x": 2,
@@ -74,24 +74,13 @@ ShallowWrapper {
           }
     }
     gridSize={3}
-    setGrid={[Function]}
-    total={0}
+    setCells={[Function]}
+    total={15}
     totals={
         Object {
-            "columns": Object {
-              "1": 0,
-              "2": 0,
-              "3": 0,
-            },
-            "diagonals": Array [
-              0,
-              0,
-            ],
-            "rows": Object {
-              "1": 0,
-              "2": 0,
-              "3": 0,
-            },
+            "columns": Object {},
+            "diagonals": Object {},
+            "rows": Object {},
           }
     }
     updateGrid={[Function]}

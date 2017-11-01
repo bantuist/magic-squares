@@ -9,11 +9,11 @@ const Container = styled.div``;
 
 export class MagicSquares extends Component {
   clue = () => {
-    const { grid, solution } = this.props;
+    const { cells, solution } = this.props;
 
-    const cellId = Object.keys(grid).find((key, i) => {
+    const cellId = Object.keys(cells).find((key, i) => {
       // Set correct cell value if cell is empty or has the wrong value
-      return !grid[key].value || grid[key].value !== solution[i]
+      return !cells[key].value || cells[key].value !== solution[i]
     });
 
     
@@ -26,10 +26,10 @@ export class MagicSquares extends Component {
     }
   }
   solve = () => {
-    const { grid, solution } = this.props;
+    const { cells, solution } = this.props;
 
-    Object.keys(grid).forEach((key, i) => {
-      const cell = grid[key];
+    Object.keys(cells).forEach((key, i) => {
+      const cell = cells[key];
 
       this.props.updateGrid(
         cell.id,
@@ -39,10 +39,10 @@ export class MagicSquares extends Component {
     });
   }
   reset = () => {
-    const { grid } = this.props;
+    const { cells } = this.props;
   
-    Object.keys(grid).forEach((key, i) => {
-      const cell = grid[key];
+    Object.keys(cells).forEach((key, i) => {
+      const cell = cells[key];
 
       this.props.updateGrid(
         cell.id,
@@ -55,7 +55,7 @@ export class MagicSquares extends Component {
   render() {
     const { 
       gridSize, 
-      grid, 
+      cells, 
       totals,
       total,
       updateGrid,
@@ -66,7 +66,7 @@ export class MagicSquares extends Component {
       <Container >
         <Board 
           gridSize={gridSize} 
-          grid={grid}
+          cells={cells}
           totals={totals}
           boardTotal={total}
           onUpdateGrid={updateGrid}
@@ -82,6 +82,6 @@ export class MagicSquares extends Component {
   }
 }
 
-export default connect(({ gridSize, total, solution, grid, totals, activeElement }) => {
-  return { gridSize, total, solution, grid, totals, activeElement };
+export default connect(({ gridSize, total, solution, cells, totals, activeElement }) => {
+  return { gridSize, total, solution, cells, totals, activeElement };
 }, { setGridSize, updateGrid })(MagicSquares);

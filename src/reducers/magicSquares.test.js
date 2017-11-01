@@ -1,6 +1,6 @@
 import magicSquaresReducer from './magicSquares';
 import * as constants from '../actions/constants';
-import Grid from '../helpers/Grid';
+import Grid from '../grid/Grid';
 
 const grid = new Grid(3);
 
@@ -8,7 +8,7 @@ describe('magicSquaresReducer', () => {
   const initialState = {
     isActive: false,
     gridSize: 3, 
-    grid: grid.setGrid(3),
+    grid: grid.setCells(3),
     totals: grid.getTotals() 
   };
 

@@ -1,18 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Cells from '../Cells';
-import Grid from '../../helpers/Grid';
+import Grid from '../../grid/Grid';
 
 const grid = new Grid(3);
-const mockSetGrid = jest.fn();
+const mockSetCells = jest.fn();
 const mockUpdateGrid = jest.fn();
 const props = {
-  activeElement: null,
-  gridSize: 3, 
-  total: 0,
-  grid: grid.setGrid(3),
-  totals: grid.getTotals(),
-  setGrid: mockSetGrid,
+  activeElement: grid.activeElement,
+  gridSize: grid.gridSize, 
+  total: grid.total,
+  cells: grid.cells,
+  totals: grid.totals,
+  setCells: mockSetCells,
   updateGrid: mockUpdateGrid
 };
 

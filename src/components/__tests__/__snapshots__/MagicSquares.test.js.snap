@@ -21,7 +21,7 @@ ShallowWrapper {
         <Board
           activeElement={undefined}
           boardTotal={undefined}
-          grid={undefined}
+          cells={undefined}
           gridSize={undefined}
           onUpdateGrid={undefined}
           totals={undefined}
@@ -42,7 +42,7 @@ ShallowWrapper {
         "props": Object {
           "activeElement": undefined,
           "boardTotal": undefined,
-          "grid": undefined,
+          "cells": undefined,
           "gridSize": undefined,
           "onUpdateGrid": undefined,
           "totals": undefined,
@@ -77,7 +77,7 @@ ShallowWrapper {
           <Board
             activeElement={undefined}
             boardTotal={undefined}
-            grid={undefined}
+            cells={undefined}
             gridSize={undefined}
             onUpdateGrid={undefined}
             totals={undefined}
@@ -98,7 +98,7 @@ ShallowWrapper {
           "props": Object {
             "activeElement": undefined,
             "boardTotal": undefined,
-            "grid": undefined,
+            "cells": undefined,
             "gridSize": undefined,
             "onUpdateGrid": undefined,
             "totals": undefined,

@@ -43,11 +43,11 @@ class Cells extends Component {
     }
   }
   render() {
-    const { gridSize, grid, onUpdateGrid } = this.props;
+    const { gridSize, cells, onUpdateGrid } = this.props;
     const isEven = number => number % 2 === 0;
     const exists = value => {
-      return Object.keys(grid).find(key => {
-        return parseInt(value, 10) === grid[key].value;
+      return Object.keys(cells).find(key => {
+        return parseInt(value, 10) === cells[key].value;
       });
     };
     const handleChange = (event, id) => {
@@ -61,8 +61,8 @@ class Cells extends Component {
         );
       }
     };
-    const cells = Object.keys(grid).map((key, i) => {
-      let cell = grid[key];
+    const grid = Object.keys(cells).map((key, i) => {
+      let cell = cells[key];
       let cellClassName =  `grid-cell cell-${cell.id}`;
       
       return (
@@ -81,7 +81,7 @@ class Cells extends Component {
     
     return (
       <Container gridSize={gridSize}>
-        {cells} 
+        {grid} 
       </Container>
     );
   }

@@ -14,7 +14,7 @@ const Container = styled.div`
 
 const Board = ({ 
   gridSize, 
-  grid, 
+  cells, 
   activeElement,
   totals, 
   boardTotal, 
@@ -38,7 +38,7 @@ const Board = ({
     <Container gridSize={gridSize}> 
       <Cells 
         gridSize={gridSize} 
-        grid={grid} 
+        cells={cells} 
         activeElement={activeElement}
         onUpdateGrid={onUpdateGrid} 
       />
