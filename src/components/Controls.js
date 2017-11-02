@@ -13,9 +13,9 @@ const Button = styled.button`
 const Controls = ({ onSolve, onClue, onReset }) => {
   return (
     <Container>
-      <Button onClick={onSolve}>Solve</Button>
-      <Button onClick={onClue}>Clue</Button>
-      <Button onClick={onReset}>Reset</Button>
+      <Button className="solve-button" onClick={onSolve}>Solve</Button>
+      <Button className="clue-button" onClick={onClue}>Clue</Button>
+      <Button className="reset-button" onClick={onReset}>Reset</Button>
     </Container>
   );
 };

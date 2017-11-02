@@ -74,7 +74,8 @@ ShallowWrapper {
           }
     }
     gridSize={3}
-    setCells={[Function]}
+    onSetCells={[Function]}
+    onUpdateGrid={[Function]}
     total={15}
     totals={
         Object {
@@ -83,7 +84,6 @@ ShallowWrapper {
             "rows": Object {},
           }
     }
-    updateGrid={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

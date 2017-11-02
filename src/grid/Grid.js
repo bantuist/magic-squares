@@ -1,5 +1,5 @@
 import { activeElement } from '../data/fixtures';
-import { triangular } from '../helpers';
+import { triangular, isEven } from '../helpers';
 
 export default class Grid {
   constructor(gridSize) {
@@ -11,7 +11,6 @@ export default class Grid {
     this.total = this.setTotal(gridSize);
     this.totals = { columns: {}, rows: {}, diagonals: {} };
   }
-  isEven = gridSize => gridSize % 2 === 0;
   isCenter = point => Math.ceil(this.gridSize / 2) === point;
 
   setTotal(gridSize) {
@@ -37,7 +36,7 @@ export default class Grid {
       
       // Cell is center cell if gridSize is odd 
       // and both x and y coords are equal to half the gridSize
-      if (!this.isEven(gridSize) 
+      if (!isEven(gridSize) 
         && this.isCenter(cell.x) 
         && this.isCenter(cell.y)
       ) {

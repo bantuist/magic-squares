@@ -2,19 +2,21 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Cells from '../Cells';
 import Grid from '../../grid/Grid';
+import * as defaults from '../../data/fixtures';
 
 const grid = new Grid(3);
-const mockSetCells = jest.fn();
-const mockUpdateGrid = jest.fn();
+const onSetCells = jest.fn();
+const onUpdateGrid = jest.fn();
 const props = {
   activeElement: grid.activeElement,
   gridSize: grid.gridSize, 
   total: grid.total,
   cells: grid.cells,
   totals: grid.totals,
-  setCells: mockSetCells,
-  updateGrid: mockUpdateGrid
+  onSetCells,
+  onUpdateGrid
 };
+const cellCount = Object.keys(defaults.cells).length;
 
 describe('Cells', () => {
   const cells = shallow(<Cells {...props} />);
@@ -23,19 +25,18 @@ describe('Cells', () => {
     expect(cells).toMatchSnapshot();
   });
 
-  it('contains a the correct number of cells', () => {
-    expect(cells.find('.grid-cell').length).toEqual(9);
+  it('contains a the correct default number of cells', () => {
+    expect(cells.find('.grid-cell').length).toEqual(cellCount);
   });
 
   describe('when the user types into the cell input', () => {
     const value = 5;
-
-    beforeEach(() => {
-      cells.find('.cell-1').simulate('change', { target: { value }});
-    });
-
+    
     xit('updates the cell value in `state` as a number', () => {
-      console.log(cells.state().grid) ;
+      // console.log(cells.find('.cell-1').;
+      cells.find('.cell-1').simulate('change', { target: { value }});
+      // console.log(cells.find('.cell-1').children());
+      // console.log(cells.state().grid) ;
       // expect(cells.state().grid['1'].value).toEqual(parseInt(value, 10));
     });
 

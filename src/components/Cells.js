@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { isEven } from '../helpers';
 
 const Container = styled.div`
   grid-column: 2/3;
@@ -44,7 +45,6 @@ class Cells extends Component {
   }
   render() {
     const { gridSize, cells, onUpdateGrid } = this.props;
-    const isEven = number => number % 2 === 0;
     const exists = value => {
       return Object.keys(cells).find(key => {
         return parseInt(value, 10) === cells[key].value;

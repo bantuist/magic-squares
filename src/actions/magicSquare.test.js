@@ -7,6 +7,7 @@ it ('creates an action to set the grid size', () => {
 
   expect(actions.setGridSize(gridSize)).toEqual(expectedAction);
 });
+
 it ('creates an action to update the grid size', () => {
   const id = 1;
   const value = 2;

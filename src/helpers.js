@@ -6,3 +6,6 @@ export const triangular = (cellCount, total) => {
   return triangular(--cellCount, total + cellCount);
 };
 
+export const isEven = number => number % 2 === 0;
+
+
