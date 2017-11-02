@@ -1,6 +1,7 @@
 # [Magic Squares](https://magic-squares.surge.sh)
 
 [![Build Status](https://travis-ci.org/bantuist/magic-squares.svg?branch=master)](https://travis-ci.org/bantuist/magic-squares)
+[![Coverage Status](https://coveralls.io/repos/github/bantuist/magic-squares/badge.svg)](https://coveralls.io/github/bantuist/magic-squares)
 
 ![Magic Squares](./screenshot.png)
 
