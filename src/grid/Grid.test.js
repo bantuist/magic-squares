@@ -1,6 +1,6 @@
 import Grid from './Grid';
 import * as defaults from '../data/fixtures';
-import { triangular } from '../helpers';
+import { triangularTotal } from '../helpers';
 
 describe('Grid', () => {
   describe('when initializing', () => {
@@ -23,9 +23,9 @@ describe('Grid', () => {
   describe('when setting a new grid', () => { 
     const grid2 = new Grid(3);
     const newGridSize = 5;
-    const newCellCount = newGridSize * newGridSize
-    const newTotal = triangular(newCellCount, newCellCount) / newGridSize;
-
+    const newCellCount = newGridSize * newGridSize;
+    const newTotal = triangularTotal(newCellCount, newCellCount) / newGridSize;
+    
     it('updates the correct `gridSize`', () => {
       expect(grid2.gridSize = newGridSize).toEqual(newGridSize);
     });

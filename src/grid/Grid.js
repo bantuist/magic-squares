@@ -1,5 +1,5 @@
 import { activeElement } from '../data/fixtures';
-import { triangular, isEven } from '../helpers';
+import { triangularTotal, isEven } from '../helpers';
 
 export default class Grid {
   constructor(gridSize) {
@@ -15,7 +15,7 @@ export default class Grid {
 
   setTotal(gridSize) {
     const cellCount = gridSize * gridSize;
-    return triangular(cellCount, cellCount) / gridSize;
+    return triangularTotal(cellCount, cellCount) / gridSize;
   };
 
   setCells(gridSize) {
